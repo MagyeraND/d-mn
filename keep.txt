@@ -1,0 +1,147 @@
+dmn@DESKTOP-FJ30OR3:~$ git clone https://github.com/MagyeraND/dmn.git
+Cloning into 'dmn'...
+remote: Enumerating objects: 3, done.
+remote: Counting objects: 100% (3/3), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+Receiving objects: 100% (3/3), done.
+dmn@DESKTOP-FJ30OR3:~$ pwd
+/home/dmn
+dmn@DESKTOP-FJ30OR3:~$ ls
+dmn
+dmn@DESKTOP-FJ30OR3:~$ cd
+dmn@DESKTOP-FJ30OR3:~$ ls
+dmn
+dmn@DESKTOP-FJ30OR3:~$ git clone https://github.com/MagyeraND/d-mn.git
+Cloning into 'd-mn'...
+remote: Enumerating objects: 3, done.
+remote: Counting objects: 100% (3/3), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+Receiving objects: 100% (3/3), done.
+dmn@DESKTOP-FJ30OR3:~$ ls
+d-mn  dmn
+dmn@DESKTOP-FJ30OR3:~$ cd dmn
+dmn@DESKTOP-FJ30OR3:~/dmn$ ls
+README.md
+dmn@DESKTOP-FJ30OR3:~/dmn$ cd d-mn
+-bash: cd: d-mn: No such file or directory
+dmn@DESKTOP-FJ30OR3:~/dmn$ cd
+dmn@DESKTOP-FJ30OR3:~$ cd d-mn
+dmn@DESKTOP-FJ30OR3:~/d-mn$ ls
+README.md
+dmn@DESKTOP-FJ30OR3:~/d-mn$ vi note.txt
+
+[1]+  Stopped                 vi note.txt
+dmn@DESKTOP-FJ30OR3:~/d-mn$ vi note.txt
+dmn@DESKTOP-FJ30OR3:~/d-mn$ cd
+dmn@DESKTOP-FJ30OR3:~$ ls
+d-mn  dmn
+dmn@DESKTOP-FJ30OR3:~$ echo "for tha squaw"> d-mn/open
+dmn@DESKTOP-FJ30OR3:~$ git push
+fatal: not a git repository (or any of the parent directories): .git
+dmn@DESKTOP-FJ30OR3:~$ cd d-mn
+dmn@DESKTOP-FJ30OR3:~/d-mn$ ls
+README.md  note.txt  open
+dmn@DESKTOP-FJ30OR3:~/d-mn$ cat open
+for tha squaw
+dmn@DESKTOP-FJ30OR3:~/d-mn$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        .note.txt.swp
+        note.txt
+        open
+
+nothing added to commit but untracked files present (use "git add" to track)
+dmn@DESKTOP-FJ30OR3:~/d-mn$ git status open
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        open
+
+nothing added to commit but untracked files present (use "git add" to track)
+dmn@DESKTOP-FJ30OR3:~/d-mn$ cd
+dmn@DESKTOP-FJ30OR3:~$ git status d-mn/open
+fatal: not a git repository (or any of the parent directories): .git
+dmn@DESKTOP-FJ30OR3:~$ git status d-mn
+fatal: not a git repository (or any of the parent directories): .git
+dmn@DESKTOP-FJ30OR3:~$ cd d-mn
+dmn@DESKTOP-FJ30OR3:~/d-mn$ git status open
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        open
+
+nothing added to commit but untracked files present (use "git add" to track)
+dmn@DESKTOP-FJ30OR3:~/d-mn$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        .note.txt.swp
+        note.txt
+        open
+
+nothing added to commit but untracked files present (use "git add" to track)
+dmn@DESKTOP-FJ30OR3:~/d-mn$ git add open
+dmn@DESKTOP-FJ30OR3:~/d-mn$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   open
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        .note.txt.swp
+        note.txt
+
+dmn@DESKTOP-FJ30OR3:~/d-mn$ git status open
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   open
+
+dmn@DESKTOP-FJ30OR3:~/d-mn$ git push
+Username for 'https://github.com': MagyeraND
+Password for 'https://MagyeraND@github.com':
+remote: Support for password authentication was removed on August 13, 2021.
+remote: Please see https://docs.github.com/get-started/getting-started-with-git/about-remote-repositories#cloning-with-https-urls for information on currently recommended modes of authentication.
+fatal: Authentication failed for 'https://github.com/MagyeraND/d-mn.git/'
+dmn@DESKTOP-FJ30OR3:~/d-mn$ git push
+Username for 'https://github.com': MagyeraND
+Password for 'https://MagyeraND@github.com':
+Everything up-to-date
+dmn@DESKTOP-FJ30OR3:~/d-mn$ git push open
+fatal: invalid gitfile format: open
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+dmn@DESKTOP-FJ30OR3:~/d-mn$ git add note.sh open
+fatal: pathspec 'note.sh' did not match any files
+dmn@DESKTOP-FJ30OR3:~/d-mn$ git add open
+dmn@DESKTOP-FJ30OR3:~/d-mn$ git commit -m "im tired"
+Author identity unknown
+
+*** Please tell me who you are.
+
+Run
+
+  git config --global user.email "you@example.com"
+  git config --global user.name "Your Name"
+
+to set your account's default identity.
+Omit --global to set the identity only in this repository.
+
+fatal: empty ident name (for <dmn@DESKTOP-FJ30OR3.>) not allowed
+dmn@DESKTOP-FJ30OR3:~/d-mn$
